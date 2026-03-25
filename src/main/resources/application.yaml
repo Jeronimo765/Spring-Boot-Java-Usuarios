@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: usuarios
+
+  # Configuración de la base de datos (Ejemplo MySQL)
+  datasource:
+    # url al servidor donde esta alojada la base de datos
+    url: jdbc:mysql://localhost:3306/laganga
+    username: root
+    password: 
+    # Driver del motor de la base de datos a utilizar (MySQL)
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # Herramienta con la que vamos a implementar el ORM de Java (Hibernate)
+  jpa:
+    # ORM de java
+    hibernate:
+      # Auto actualización de la base de datos basado en la entity
+      ddl-auto: none
+    # Visualizar consultas sql ejecutadas en consola
+    show-sql: true
+    # Dialecto del motor de la base de datos utilizado
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+server:
+  port: 9090
+  servlet:
+    context-path: /api/v1
