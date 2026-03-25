@@ -19,7 +19,7 @@ spring:
     # Visualizar consultas sql ejecutadas en consola
     show-sql: true
     # Dialecto del motor de la base de datos utilizado
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQLDialect
 
 server:
   port: 9090
